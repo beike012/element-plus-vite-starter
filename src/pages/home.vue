@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { testSelect } from "~/apis/modules/login";
+
+testSelect().then((res) => {
+  console.log(res);
+});
 </script>
 <template>
-  <div>
-    首页
-  </div>
+  <!-- <BaseMap></BaseMap> -->
 </template>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

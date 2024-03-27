@@ -13,11 +13,15 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import devServer from './devServer.config'
 
 const pathSrc = path.resolve(__dirname, 'src')
-
 // https://vitejs.dev/config/
 export default defineConfig({
+  // 服务配置
+  server: {
+    ...devServer
+  },
   resolve: {
     alias: {
       '~/': `${pathSrc}/`,
