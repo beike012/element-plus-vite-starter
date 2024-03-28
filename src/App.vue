@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider namespace="ep" :locale="zhCn">
+  <el-config-provider namespace="el" :locale="zhCn">
     <BaseHeader />
     <div class="flex main-container">
       <BaseSide />
@@ -15,10 +15,10 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 <style>
 #app {
   /* text-align: center; */
-  color: var(--ep-text-color-primary);
+  color: var(--el-text-color-primary);
 }
 
 .main-container {
-  height: calc(100vh - var(--ep-menu-item-height) - 4px);
+  height: calc(100vh - var(--el-menu-item-height) - 4px);
 }
 </style>

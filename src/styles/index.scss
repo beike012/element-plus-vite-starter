@@ -2,8 +2,8 @@
 @use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
 
 :root {
-  // --ep-color-primary: red;
-  --ep-menu-item-font-size: 1rem;
+  // --el-color-primary: red;
+  --el-menu-item-font-size: 1rem;
 }
 
 body {
@@ -13,17 +13,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  // background: url('~/assets/img/user.jfif') no-repeat;
-  // background-size: cover;
 }
 
 a {
-  color: var(--ep-color-primary);
+  color: var(--el-color-primary);
 }
 
 code {
   border-radius: 2px;
   padding: 2px 4px;
-  background-color: var(--ep-color-primary-light-9);
-  color: var(--ep-color-primary);
+  background-color: var(--el-color-primary-light-9);
+  color: var(--el-color-primary);
 }

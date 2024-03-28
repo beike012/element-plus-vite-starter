@@ -108,12 +108,12 @@ const handleDelete = (index: number, row: User) => {
 </script>
 
 <style>
-.bk-form-inline .ep-input {
-  --ep-input-width: 220px;
+.bk-form-inline .el-input {
+  --el-input-width: 220px;
 }
 
-.bk-form-inline .ep-select {
-  --ep-select-width: 220px;
+.bk-form-inline .el-select {
+  --el-select-width: 220px;
 }
 .mb20 {
   margin-bottom: 20px;

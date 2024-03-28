@@ -21,7 +21,6 @@ const headers = [
 ];
 
 const circleUrl = "/user.jfif";
-// const circleUrl = 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
 const route = useRoute();
 </script>
 
@@ -31,28 +30,33 @@ const route = useRoute();
       <el-menu-item h="full" @click="toggleDark()">
         <button
           class="border-none w-full bg-transparent cursor-pointer"
-          style="height: var(--ep-menu-item-height)"
+          style="height: var(--el-menu-item-height)"
         >
           <i inline-flex i="dark:ep-moon ep-sunny" />
         </button>
       </el-menu-item>
       <el-menu-item h="full" v-for="item in headers" :index="item.route">
-        <!-- <router-link :to="item.route" w="full">
-        {{ item.label }}
-      </router-link> -->
         {{ item.label }}
       </el-menu-item>
     </el-menu>
-    <el-avatar :src="circleUrl" size="large" />
+    <el-dropdown class="bh-avatar">
+      <el-avatar :src="circleUrl" size="large" />
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item>退出</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
   </div>
 </template>
 <style lang="scss" scoped>
 .base-header {
   position: relative;
-  .ep-avatar {
+  .bh-avatar {
     position: absolute;
     top: 2px;
     right: 16px;
+    cursor: pointer;
   }
 }
 </style>
