@@ -1,6 +1,8 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import "~/styles/index.scss";
+import "~/styles/common.scss";
+import "~/styles/reset.css";
 import "uno.css";
 // If you want to use ElMessage, import it.
 import "element-plus/theme-chalk/src/message.scss";

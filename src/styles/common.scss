@@ -1,0 +1,84 @@
+html,
+body,
+#app {
+  width: 100%;
+  // font-size: 0.14rem;
+  font-size: 1rem;
+  // background-color: #f6f6f6 !important;
+  // color: black;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: auto !important;
+  width: 100%;
+  ::-webkit-input-placeholder {
+    color: #878d99;
+  }
+  ::-moz-placeholder {
+    color: #878d99;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+
+    /* 对垂直流动条有效 */
+    height: 5px;
+
+    /* 对水平流动条有效 */
+  }
+
+  /* 定义滚动条的轨道颜色、内阴影及圆角 */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    background-color: #ececec;
+    border-radius: 3px;
+  }
+
+  /* 定义滑块颜色、内阴影及圆角 */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    box-shadow: inset 0 0 6px rgba(182, 182, 182, 0.3);
+    background-color: #e8e8e8;
+  }
+
+  /* 定义两端按钮的样式 */
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  /* 定义右下角汇合处的样式 */
+  ::-webkit-scrollbar-corner {
+    background: khaki;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mainPage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 38, 44, 0.6);
+  z-index: 10000;
+}
+
