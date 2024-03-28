@@ -1,24 +1,14 @@
 <template>
   <el-config-provider namespace="el" :locale="zhCn">
-    <BaseHeader />
-    <div class="flex main-container">
-      <BaseSide />
-      <div w="full" py="4" px="4">
-        <router-view />
-      </div>
-    </div>
+    <router-view />
   </el-config-provider>
 </template>
 <script lang="ts" setup>
-import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import zhCn from "element-plus/dist/locale/zh-cn.mjs";
 </script>
 <style>
 #app {
   /* text-align: center; */
   color: var(--el-text-color-primary);
-}
-
-.main-container {
-  height: calc(100vh - var(--el-menu-item-height) - 4px);
 }
 </style>
