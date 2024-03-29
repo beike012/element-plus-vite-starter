@@ -5,10 +5,10 @@ import Axios, { AxiosError, AxiosInstance, AxiosResponse, AxiosPromise } from 'a
 import { AxiosRequestConfigInterface, PendingType } from '@/types/axios'
 import { ElLoading, ElMessage } from 'element-plus'
 import Config from '@/config/axios'
-import { TOKEN_NAME } from '@/config/consts'
 import { responseStatusError } from './axiosErrorHandler'
 import { ApiResponseResultType } from '../types/response'
 import { store } from '@/utils';
+const TOKEN_NAME = import.meta.env.VITE_TOKEN_NAME
 let loadingInstance: any
 // 取消重复请求
 const pending: Array<PendingType> = []

@@ -1,7 +1,8 @@
 /**
  * axios 配置文件
 */
-import { BASE_URL } from './consts';
+const dev = import.meta.env.DEV
+const BASE_URL = dev ? "/admin" : "/"
 export default {
   baseURL: BASE_URL, // Api Host,
   url: '',

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { toggleDark } from "~/composables";
+import { store } from "~/utils";
 const headers = [
   {
     label: "增",
@@ -22,6 +23,11 @@ const headers = [
 
 const circleUrl = "/user.jfif";
 const route = useRoute();
+const router = useRouter()
+const handleLogOut = ()=>{
+  store.clear()
+  router.push('/login')
+}
 </script>
 
 <template>
@@ -43,7 +49,7 @@ const route = useRoute();
       <el-avatar :src="circleUrl" size="large" />
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item>退出</el-dropdown-item>
+          <el-dropdown-item @click="handleLogOut">退出</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>

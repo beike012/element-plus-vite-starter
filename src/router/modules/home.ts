@@ -9,7 +9,9 @@ export default [
       {
         path: "/home/index",
         component: () => import("@/pages/home.vue"),
-        meta: {},
+        meta: {
+          title: "主页",
+        },
       },
     ],
   },
@@ -22,7 +24,9 @@ export default [
       {
         path: "/create/index",
         component: () => import("@/pages/crud.vue"),
-        meta: {},
+        meta: {
+          title: "增",
+        },
       },
     ],
   },
@@ -35,7 +39,9 @@ export default [
       {
         path: "/delete/index",
         component: () => import("@/pages/home.vue"),
-        meta: {},
+        meta: {
+          title: "删",
+        },
       },
     ],
   },
@@ -48,7 +54,9 @@ export default [
       {
         path: "/update/index",
         component: () => import("@/pages/home.vue"),
-        meta: {},
+        meta: {
+          title: "改",
+        },
       },
     ],
   },
@@ -61,7 +69,9 @@ export default [
       {
         path: "/read/index",
         component: () => import("@/pages/home.vue"),
-        meta: {},
+        meta: {
+          title: "查",
+        },
       },
     ],
   },

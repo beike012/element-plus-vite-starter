@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ElMessage, FormInstance } from "element-plus";
 import { reactive, ref } from "vue";
+import { store } from "~/utils";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
@@ -33,6 +34,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     if (valid) {
       // 这里可以添加登录成功的逻辑代码
       // 如果 autoLogin 为 true，则可能需要将登录状态存储在 cookie 或 localStorage 中
+      store.set(import.meta.env.VITE_TOKEN_NAME,'hehe')
       router.push("/");
     } else {
       console.log("验证失败！", fields);
@@ -53,6 +55,9 @@ const handleContract = (e: Event) => {
   e.preventDefault();
   console.log("打开协议");
 };
+const handleRegister = ()=>{
+  ElMessage.warning("敬请期待！");
+}
 </script>
 <template>
   <div class="login-wrap">
@@ -60,7 +65,7 @@ const handleContract = (e: Event) => {
       <template #header>
         <div class="card-header">
           <span>会员登录</span>
-          <span>
+          <span @click="handleRegister">
             立即注册
             <i>></i>
           </span>
@@ -106,7 +111,7 @@ const handleContract = (e: Event) => {
           </div>
         </el-form-item>
         <el-form-item prop="agree">
-          <el-checkbox v-model="form.agree">
+          <el-checkbox v-model="form.agree" :validate-event="false">
             登录即同意
             <span class="color-blue" @click.prevent="handleContract">
               XX网使用协议
