@@ -27,6 +27,13 @@ const routes = [
     },
     component: () => import("@/pages/login.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    meta: {
+      title: "404 Not Found",
+    },
+    component: () => import("@/pages/redirect/404.vue"),
+  },
   ...modules,
 ];
 const router = createRouter({
